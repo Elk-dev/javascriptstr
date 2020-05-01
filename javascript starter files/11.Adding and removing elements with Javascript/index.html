@@ -14,6 +14,24 @@
   </ul>
 
   <script>
+    //create element
+    var listItem = document.createElement('li');
+
+    //create text node
+    var itemText = document.createTextNode('Bananas');
+
+    //add text to element
+    listItem.appendChild(itemText);
+    console.log(listItem);
+
+    //select parent list
+
+    var list = document.getElementById('list');
+
+    //add new list item to list
+    list.appendChild(listItem);
+
+
 
   </script>
   
