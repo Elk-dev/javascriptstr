@@ -31,6 +31,22 @@
     //add new list item to list
     list.appendChild(listItem);
 
+    // add grapes to item list
+    var newListItem =  document.createElement('li');
+    var newItemText =  document.createTextNode('Grapes');
+    newListItem.appendChild(newItemText);
+
+    var itemToReplace = document.querySelectorAll('li')[1];
+
+    list.replaceChild(newListItem, itemToReplace);
+
+    //remove an item
+    list.removeChild(newListItem);
+
+    var secondToRemove = document.querySelectorAll('li')[0];
+
+    list.removeChild(secondToRemove);
+
 
 
   </script>
