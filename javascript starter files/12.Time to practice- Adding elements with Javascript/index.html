@@ -10,16 +10,14 @@
 
   <main>
     <!-- Create the following elements using Javascript: -->
-
+    <p id="they"></p>
     <img>
   </main>
 
   <script>
     //create p element to write on top of page
-    var newElement = document.createElement('p');
-    var newText = document.createTextNode('Hello, My name is Elkin');
-    newElement.appendChild(newText);
-    
+    document.getElementById('they').innerHTML = 'Hello, Elkin!';
+    document.querySelector('img').setAttribute('src', 'image.jpg');
 
    
 
