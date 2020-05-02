@@ -8,15 +8,19 @@
 </head>
 <body>
 
+
   <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde dolore at perspiciatis, id soluta veniam illum libero earum. Minima autem mollitia dolores, similique officia impedit magnam cum accusamus corrupti?</p>
 
   <script>
+    var textElement =  document.querySelector('p');
 
-    var changeFontSize = () => {
+    var changeFontSize = () =>{
       document.getElementById('text').style.fontSize = '34px';
     }
 
-    changeFontSize();
+    textElement.addEventListener('click', changeFontSize);
+
+    // changeFontSize();
 
   </script>
   
