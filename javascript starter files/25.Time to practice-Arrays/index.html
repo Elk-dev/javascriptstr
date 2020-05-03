@@ -15,6 +15,13 @@
     // 1. Arrange elements into alphabetical order and store in a new variable
     // Hint - use array method .sort()
     var characters = ['Roger Rabbit', 'Jessica Rabbit', 'Daffy Duck', 'Bugs Bunny'];
+    var newCharacters = characters.sort();
+
+    var sortedCharacters = newCharacters.map(cartoon =>{
+      return ' Name: ' + cartoon;
+    });
+
+    document.getElementById('characters').innerHTML = sortedCharacters;
 
     // 2. Return new array with each element having 'Name' prefix 
     // Eg. Name: Bugs Bunny, Name: Daffy Duck
