@@ -16,4 +16,10 @@ const shapes = [
     {color: '#6A4C93', width: 250, height: 160},
 ];
 
-console.log(shapes[2]);
+const selectRandomShape = () => {
+    const randomNumber = Math.floor(Math.random()*shapes.length);
+    const randomSelection = shapes[randomNumber];
+    return randomSelection;
+}
+
+selectRandomShape();
