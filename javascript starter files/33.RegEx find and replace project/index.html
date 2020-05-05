@@ -43,7 +43,18 @@
   <p></p>
   
   <script>
-       
+       document.getElementById('replaceBtn').addEventListener('click', (e)=>{
+         let originalText =  document.querySelectorAll('p')[0];
+         let modifiedText = document.querySelectorAll('p')[1];
+         
+         let findText = document.getElementById('find').value;
+         let replaceText = document.getElementById('replace').value;
+
+         let findWithModifier = new RegExp(findText, 'i');
+         let newText = originalText.innerHTML.replace(findWithModifier, replaceText);
+         modifiedText.innerHTML = newText;
+         e.preventDefault();
+       })
   
   </script>
 </body>
