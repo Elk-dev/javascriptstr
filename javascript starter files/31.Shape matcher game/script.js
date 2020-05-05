@@ -22,4 +22,16 @@ const selectRandomShape = () => {
     return randomSelection;
 }
 
-selectRandomShape();
+const repeatRandomShape = () => {
+setInterval(() => {
+    shape1 = selectRandomShape();
+    shape2 = selectRandomShape();
+    console.log(shape1);
+    console.log(shape2);
+}, 1000); 
+}
+
+//start game
+document.getElementById('play').onclick = () =>{
+    repeatRandomShape();
+}
