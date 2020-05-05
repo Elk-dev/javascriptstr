@@ -2,6 +2,7 @@ let currentScore = 0;
 let playing = false;
 let shape1;
 let shape2;
+const matchBtn = document.getElementById('match');
 
 const shapes = [
     {color: '#FF595E', width: 250, height: 160},
@@ -23,7 +24,9 @@ const selectRandomShape = () => {
 }
 
 const repeatRandomShape = () => {
-setInterval(() => {
+    setInterval(() => {
+    
+    matchBtn.disabled = false;
     shape1 = selectRandomShape();
     shape2 = selectRandomShape();
 
@@ -43,6 +46,24 @@ setInterval(() => {
 
 //start game
 document.getElementById('play').onclick = () =>{
+    playing = true;
+//disable play button when playing
+document.getElementById('play').disabled = true;
     repeatRandomShape();
+}
+
+//compare
+document.getElementById('match').onclick = () => {
+
+    if (playing){
+        matchBtn.disabled = true;
+        if(Object.is(shape1, shape2)) {
+            currentScore++;
+            document.getElementById('score').innerHTML = currentScore;
+        }else{
+            currentScore--;
+            document.getElementById('score').innerHTML = currentScore;
+        }
+    }
 }
 
